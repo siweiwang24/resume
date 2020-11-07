@@ -1,0 +1,117 @@
+{
+  "basics": {
+    "name": "Siwei Wang",
+    "email": "siweiw9@gmail.com",
+    "phone": "(440) 855-5677",
+    "url": "https://siweiwang.me/",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "siweiwang24",
+        "url": "https://github.com/siweiwang24"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "siweiwang24",
+        "url": "https://www.linkedin.com/in/siweiwang24/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Amazon",
+      "position": "Software Development Engineer Intern",
+      "url": "https://www.amazon.com/",
+      "startDate": "2020-05",
+      "endDate": "2020-08",
+      "highlights": [
+        "Worked on the chaos engineering team to integrate failure injection experiments into Amazon's continuous deployment pipeline. I automated the entire end-to-end integration testing process for chaos tests.",
+        "Directly impacts Amazon by (annually) saving around a month of on-call engineer time spent onboarding services and handles over 400 tickets related to authorization requests.",
+        "Instantly performs a procedure that had, at the time of my employment, consumed nearly 3.6 million developer-hours across 22,589 services, of which 328 were tier 1."
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "position": "Explore Intern",
+      "url": "https://www.microsoft.com/en-us/",
+      "startDate": "2019-05",
+      "endDate": "2019-08",
+      "highlights": [
+        "Worked in product manager and software developer roles under Microsoft's PowerPoint foundations team. Analyzed user feedback and authored a specification for user-configurable Inking hotkeys in PowerPoint.",
+        "Implemented my feature into the Office 365 code base with specific focus on being extensible and accessible. My contribution allows PowerPoint users to configure their own keyboard shortcuts to quickly access the inking tools that they use most often."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Michigan",
+      "url": "https://umich.edu/",
+      "area": "Computer Science and Math",
+      "studyType": "Bachelor",
+      "startDate": "2018-08",
+      "endDate": "2021-05",
+      "score": "3.6/4.0",
+      "courses": [
+        "machine learning",
+        "computer vision",
+        "operating systems",
+        "web systems",
+        "computer security",
+        "computer architecture",
+        "data structures and algorithms",
+        "differential topology",
+        "abstract algebra",
+        "real analysis",
+        "theoretical statistics"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Thread Library",
+      "startDate": "2020-02",
+      "endDate": "2020-02",
+      "entity": "EECS 482",
+      "url": "https://github.com/siweiwang24/482-p2-thread.git",
+      "highlights": [
+        "An efficient thread library that supports up to 16 processors. Interfaces are provided for the CPU, threads, mutexes, and condition variables.",
+        "Seeks to optimize for time, space, and power consumption by minimizing context swaps, putting CPU's to sleep, maximizing concurrency, and reducing stack frames.",
+        "The library comes with extensive unit tests and test automation scripts. Each test is automatically wrapped in Python code to utilize the PyTest framework."
+      ]
+    },
+    {
+      "name": "MapReduce Server",
+      "startDate": "2020-03",
+      "endDate": "2020-04",
+      "entity": "EECS 485",
+      "url": "https://github.com/siweiwang24/485-p4-mapreduce.git",
+      "highlights": [
+        "A fault-tolerant, multi-process, multi-threaded MapReduce server that runs user-submitted jobs as a daemon.",
+        "Master process and and an arbitrary number of workers communicate over TCP or UDP sockets to delegate jobs and send heartbeat signals."
+      ]
+    },
+    {
+      "name": "Deep CNN for Movie Posters",
+      "startDate": "2019-11",
+      "endDate": "2019-12",
+      "entity": "EECS 445",
+      "url": "https://github.com/siweiwang24/445-p2-dl.git",
+      "highlights": [
+        "Trained a PyTorch CNN to classify movie posters into genres, using ensemble methods to achieve a 4-fold accuracy improvement (relative to random).",
+        "Tuned an auto-encoder to reduce dimensionality and improve results through transfer learning."
+      ]
+    },
+    {
+      "name": "Radix Tree",
+      "startDate": "2019-10",
+      "endDate": "2019-12",
+      "entity": "Personal",
+      "url": "https://github.com/siweiwang24/radix-tree.git",
+      "highlights": [
+        "Ordered set API with prefix operations for strings implemented as a compressed prefix tree in modern C++.",
+        "Over 15,000 times faster than the standard library on benchmark tests.",
+        "Extensively documented and unit tested for ease-of-use and correctness."
+      ]
+    }
+  ]
+}

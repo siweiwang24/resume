@@ -1,0 +1,77 @@
+\documentclass[10pt]{report}
+
+\usepackage[margin=.5in]{geometry}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fp}
+
+\setstretch{1.23}
+\pagestyle{empty}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+% Calculate number of contacts.
+\FPeval{\contacts}{clip(\VAR{basics["profiles"] | length} + 2)}
+
+\begin{document}
+    \begin{center}
+        \LARGE \VAR{basics["name"]}
+    \end{center}
+    \begin{tabularx}{\textwidth}{*\contacts{Y}}
+        \VAR{basics["email"]} &\BLOCK{for prof in basics["profiles"]} \VAR{prof["network"]}: \href{\VAR{prof["url"]}}{\VAR{prof["username"]}} &\BLOCK{endfor} \VAR{basics["phone"]}
+    \end{tabularx}
+
+    \begin{center}
+        \Large Employment
+    \end{center}
+    \begin{description}
+\BLOCK{for job in work}
+
+        \item[\href{\VAR{job["url"]}}{\VAR{job["name"]}}:] \VAR{job["position"]} \hfill \VAR{job["startDate"]} to \VAR{job["endDate"]}
+        \begin{itemize}[noitemsep]
+\BLOCK{for entry in job["highlights"]}
+
+            \item \VAR{entry}
+\BLOCK{endfor}
+
+        \end{itemize}
+\BLOCK{endfor}
+
+    \end{description}
+
+    \begin{center}
+        \Large Education
+    \end{center}
+    \begin{description}
+\BLOCK{for school in education}
+
+        \item[\href{\VAR{school["url"]}}{\VAR{school["institution"]}}:] \VAR{school["studyType"]} in \VAR{school["area"]}, GPA: \VAR{school["score"]} \hfill \VAR{school["startDate"]} to \VAR{school["endDate"]}
+        \begin{description}
+
+            \item[Coursework:] \BLOCK{for class in school["courses"]}\VAR{class}\BLOCK{if not loop.last}, \BLOCK{endif}\BLOCK{endfor}
+
+        \end{description}
+
+\BLOCK{endfor}
+    \end{description}
+
+    \begin{center}
+        \Large Featured Projects
+    \end{center}
+    \begin{description}
+\BLOCK{for proj in projects}
+
+        \item[\href{\VAR{proj["url"]}}{\VAR{proj["name"]}}:] \VAR{proj["entity"]} \hfill \VAR{proj["startDate"]} to \VAR{proj["endDate"]}
+        \begin{itemize}[noitemsep]
+\BLOCK{for entry in proj["highlights"]}
+
+            \item \VAR{entry}
+\BLOCK{endfor}
+
+        \end{itemize}
+\BLOCK{endfor}
+
+    \end{description}
+
+\end{document}
