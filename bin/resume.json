@@ -50,7 +50,7 @@
       "studyType": "Bachelor",
       "startDate": "2018-08",
       "endDate": "2021-05",
-      "score": "3.6/4.0",
+      "score": "3.51/4.00",
       "courses": [
         "machine learning",
         "computer vision",
@@ -80,28 +80,6 @@
       ]
     },
     {
-      "name": "MapReduce Server",
-      "startDate": "2020-03",
-      "endDate": "2020-04",
-      "entity": "EECS 485",
-      "url": "https://github.com/siweiwang24/485-p4-mapreduce.git",
-      "highlights": [
-        "A fault-tolerant, multi-process, multi-threaded MapReduce server that runs user-submitted jobs as a daemon.",
-        "Master process and and an arbitrary number of workers communicate over TCP or UDP sockets to delegate jobs and send heartbeat signals."
-      ]
-    },
-    {
-      "name": "Deep CNN for Movie Posters",
-      "startDate": "2019-11",
-      "endDate": "2019-12",
-      "entity": "EECS 445",
-      "url": "https://github.com/siweiwang24/445-p2-dl.git",
-      "highlights": [
-        "Trained a PyTorch CNN to classify movie posters into genres, using ensemble methods to achieve a 4-fold accuracy improvement (relative to random).",
-        "Tuned an auto-encoder to reduce dimensionality and improve results through transfer learning."
-      ]
-    },
-    {
       "name": "Radix Tree",
       "startDate": "2019-10",
       "endDate": "2019-12",
@@ -112,6 +90,15 @@
         "Over 15,000 times faster than the standard library on benchmark tests.",
         "Extensively documented and unit tested for ease-of-use and correctness."
       ]
+    }
+  ],
+  "publications": [
+    {
+      "name": "English Accent Classification with CNN-BiLSTM",
+      "publisher": "unpublished",
+      "releaseDate": "2021-04-22",
+      "url": "https://github.com/siweiwang24/accent-classifier.git",
+      "summary": "In this paper, I test the hypothesis that a CNN can improve the ability of a BiLSTM to automatically classify accents in spoken English."
     }
   ]
 }
